@@ -1,0 +1,105 @@
+.carousel-item img {
+  width: 100%;
+  /* Asegura que la imagen ocupe todo el ancho del carrusel */
+  height: 300px;
+  /* Ajusta la altura al 100% del contenedor */
+  object-fit: cover;
+  /* Asegura que la imagen cubra el área del carrusel sin distorsionar */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgb(208, 148, 234);
+  /* Color de las flechas */
+  border-radius: 50%;
+
+  width: 30px;
+  /* Ajusta el tamaño de las flechas */
+  height: 30px;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+  background-color: rgb(208, 148, 234);
+  /* Color de las flechas cuando se pasa el ratón (gris oscuro) */
+}
+
+header {
+  background-color: #603e85;
+}
+.accordion-button {
+  background-color: #603e85;
+  /* Cambia este color a tu preferido */
+  color: white;
+  /* Cambiar el color del texto del encabezado */
+}
+
+/* Cambiar el color cuando el acordeón está activo */
+.accordion-button:not(.collapsed) {
+  background-color: #603e85;
+  /* Color al hacer click en el acordeón */
+  color: white;
+}
+
+/* Efecto al hacer clic sobre el botón del acordeón (cuando está activo) */
+.accordion-button:not(.collapsed) {
+  background-color: #9461BC;
+  /* Color de fondo cuando está abierto */
+  color: white;
+  /* Color del texto cuando está abierto */
+}
+
+.toast-body {
+  background-color: #e8daef;
+}
+
+/* Eliminar el subrayado y color de los enlaces */
+a {
+  text-decoration: none;
+  /* Quita el subrayado */
+  color: inherit;
+  /* Hace que el color sea el mismo que el texto contiguo */
+}
+
+/* También puedes agregar más estilo si quieres */
+a:hover {
+  color: inherit;
+  /* Mantiene el color en hover */
+  text-decoration: none;
+  /* No mostrar subrayado al hacer hover */
+}
+
+/* Las estrellas del producto*/
+.star-rating .fa-star {
+  color: gold;
+}
+
+/* Estilo para el contenedor de cookies */
+#cookieConsent {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #603e85;
+  /* Fondo oscuro */
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 14px;
+  z-index: 9999;
+  /* Para asegurarse de que esté por encima de otros elementos */
+}
+
+#cookieConsent a {
+  color: #f8f9fa;
+  text-decoration: underline;
+}
+
+#cookieConsent button {
+  background-color: #603e85;
+  color: white;
+  border: 1px solid white;
+  padding: 5px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
