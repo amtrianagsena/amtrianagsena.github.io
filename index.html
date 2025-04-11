@@ -13,7 +13,8 @@
   <!-- Las estrellas-->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
   <!-- css personalizado-->
-  <link rel="stylesheet" href="css/laik.css">
+  <link rel="stylesheet" href="laik.css">
+  <link rel="stylesheet" href="script.js">
 </head>
 
 <body>
@@ -45,12 +46,19 @@
             <i class="bi bi-pentagon-half me-1"></i>Entregas el mismo día
           </b>
         </div>
-        <div class="col-6 d-flex justify-content-end text-white">
+        <div class="col-5 d-flex justify-content-end text-white">
           <div class="d-none d-lg-block">
             <b class="me-2">Llámanos al 300xxxxxxx</b>
             <i class="bi bi-whatsapp me-2"></i>
             <i class="bi bi-instagram me-2"></i>
             <i class="bi bi-facebook"></i>
+          </div>
+        </div>
+        <!-- Switch para cambiar entre modo oscuro y claro -->
+        <div class="col-1 text-white d-none d-lg-flex justify-content-end">
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="toggleMode">
+            <label class="form-check-label" for="toggleMode"><i class="bi bi-mask"></i></label>
           </div>
         </div>
       </div>
@@ -97,7 +105,7 @@
       </div>
     </div>
     <!--Barra de navegación fixed-top-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white"> 
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
       <div class="container-fluid">
         <!-- Botón de toggle para pantallas pequeñas -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -218,9 +226,9 @@
       <!--fs-* tamaño de letra de fs-1 muy grande a fs-6 muy pequeño-->
       <h2 class="fs-5"><b>Categorías</b></h2>
       <!--categorias en cards-->
-      <div class="row">
+      <div class="row no-cambiar-color">
         <div class="col-12 col-md-3">
-          <div class="card border-0 mx-auto" style="width: 18rem;">
+          <div class="card border-0 mx-auto mb-2" style="width: 18rem;">
             <img src="img/categoria_alimento-min.png" class="card-img-top w-50 mx-auto" alt="Alimento">
             <div class="card-body">
               <p class="card-text text-center"><b>Alimento</b></p>
@@ -228,7 +236,7 @@
           </div>
         </div>
         <div class="col-12 col-md-3">
-          <div class="card border-0 mx-auto" style="width: 18rem;">
+          <div class="card border-0 mx-auto mb-2" style="width: 18rem;">
             <img src="img/categoria_higiene.png" class="card-img-top w-50 mx-auto" alt="Higiene">
             <div class="card-body">
               <p class="card-text text-center"><b>Cuidado e Higiene</b></p>
@@ -236,7 +244,7 @@
           </div>
         </div>
         <div class="col-12 col-md-3">
-          <div class="card border-0 mx-auto" style="width: 18rem;">
+          <div class="card border-0 mx-auto mb-2" style="width: 18rem;">
             <img src="img/categoria_juguetes.png" class="card-img-top w-50 mx-auto" alt="Juguetes">
             <div class="card-body">
               <p class="card-text text-center"><b>Juguetes</b></p>
@@ -244,7 +252,7 @@
           </div>
         </div>
         <div class="col-12 col-md-3">
-          <div class="card border-0 mx-auto" style="width: 18rem;">
+          <div class="card border-0 mx-auto mb-2" style="width: 18rem;">
             <img src="img/categoria_accesorios.png" class="card-img-top w-50 mx-auto" alt="Accesorios">
             <div class="card-body">
               <p class="card-text text-center"><b>Accesorios</b></p>
@@ -288,7 +296,7 @@
       <aside>
         <p class="fs-5 mt-4"><b>Favoritos de Laik</b></p>
         <div class="row">
-          <div class="col-12 col-md-3">
+          <div class="col-12 col-md-3 no-cambiar-color">
             <!-- Producto -->
             <div class="card mx-auto mb-2" style="width: 18rem;">
               <img src="img/masticables.jpg" class="card-img-top w-50 mx-auto" alt="Producto">
@@ -307,7 +315,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-3">
+          <div class="col-12 col-md-3 no-cambiar-color">
             <!-- Producto -->
             <div class="card mx-auto mb-2" style="width: 18rem;">
               <img src="img/galletas.jpg" class="card-img-top w-50 mx-auto" alt="Producto">
@@ -326,7 +334,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-3">
+          <div class="col-12 col-md-3 no-cambiar-color">
             <!-- Producto -->
             <div class="card mx-auto mb-2" style="width: 18rem;">
               <img src="img/salsa.jpg" class="card-img-top w-50 mx-auto" alt="Producto">
@@ -430,7 +438,9 @@
             <hr>
           </div>
         </div>
-        <div class="row" style="background-color: #f2f4f4;">
+        <!--<div class="row" style="background-color: #f2f4f4;">
+          se quita el background de esta sección para ayudar al modo oscuro-->
+        <div class="row">
           <div class="col-md-3 d-flex justify-content-center align-items-center">
             <b class="text-center">Pago 100% seguro 🔒 SSL
               <br>
@@ -443,7 +453,8 @@
             <img class="img-fluid" src="img/GOOGLEP.png" alt="googleplay">
           </div>
         </div>
-        <p class="text-center">© 2025 Laik. Todos los derechos reservados.</p>
+        <hr>
+        <p id="derechos" class="text-center">© 2025 Laik. Todos los derechos reservados.</p>
     </footer>
     <!-- Contenedor de cookies -->
     <div id="cookieConsent">
@@ -460,6 +471,50 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 
+  <!-- script para modo oscuro y claro -->
+  <script>
+    // JavaScript para alternar entre modo claro y oscuro
+    const toggleButton = document.getElementById('toggleMode');
+    let isDarkMode = false;
+
+    toggleButton.addEventListener('click', function () {
+      if (isDarkMode) {
+        // Cambiar a modo claro
+        document.body.classList.remove('bg-dark', 'text-white');
+        document.querySelector('footer').classList.remove('bg-dark', 'text-white');
+        document.querySelector('footer').classList.add('bg-light', 'text-dark');
+
+        // Restaurar texto de color negro en elementos con clase 'no-cambiar-color'
+        const noChangeTextElements = document.querySelectorAll('.no-cambiar-color');
+        noChangeTextElements.forEach(function (el) {
+          el.classList.add('text-dark');
+          el.classList.remove('text-white');
+        });
+
+        toggleButton.textContent = 'Cambiar a Modo Oscuro';
+
+      } else {
+        // Cambiar a modo oscuro
+        document.body.classList.add('bg-dark', 'text-white');
+        document.querySelector('footer').classList.add('bg-dark', 'text-white');
+        document.querySelector('footer').classList.remove('bg-light', 'text-dark');
+
+        // Restaurar texto de color negro en elementos con clase 'no-cambiar-color'
+        const noChangeTextElements = document.querySelectorAll('.no-cambiar-color');
+        noChangeTextElements.forEach(function (el) {
+          el.classList.add('text-dark');
+          el.classList.remove('text-white');
+        });
+
+        toggleButton.textContent = 'Cambiar a Modo Claro';
+      }
+
+      // Alternar la variable de estado
+      isDarkMode = !isDarkMode;
+    });
+  </script>
+
+  <!-- script para toast -->
   <script>
     // Mostrar el toast automáticamente cuando se carga la página
     document.addEventListener('DOMContentLoaded', function () {
@@ -467,12 +522,15 @@
       toast.show();
     });
   </script>
+
+  <!-- Script para ocultar el contenedor de cookies -->
   <script>
     // Función para ocultar el contenedor de cookies al hacer clic en "Aceptar"
     document.getElementById('acceptCookies').addEventListener('click', function () {
       document.getElementById('cookieConsent').style.display = 'none';
     });
   </script>
+
   <!-- Script para abrir el modal al cargar la página -->
   <script>
     // Esperamos a que la página se haya cargado completamente
