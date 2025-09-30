@@ -1,0 +1,16 @@
+
+/* styles.css */
+:root {
+  --sena-green: #007a33;
+  --dark: #0b0b0b;
+  --light: #ffffff;
+  --muted: #6c6c6c;
+}
+
+/* Imagen del carrusel tamaño fijo */
+.carousel-inner img {
+  width: 600px;
+  height: 300px;
+  object-fit: cover;
+  margin: auto;
+}
